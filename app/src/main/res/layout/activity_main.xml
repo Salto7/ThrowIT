@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    tools:context="com.google.android.gms.nearby.messages.samples.nearbydevices.MainActivity"
+    android:background="@drawable/bp"
+    android:weightSum="1"
+    android:id="@+id/activity_main_container">
+    <!--android:background="@drawable/bg"-->
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/info_label"/>
+    </LinearLayout>
+
+    <!-- Download Button -->
+    <Button
+        android:id="@+id/list_devs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="List devices"
+        android:textColor="@drawable/button"
+        android:background="@drawable/custom_button"
+        android:layout_gravity="bottom|center"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        />
+
+    <!--Select file button -->
+    <Button
+        android:id="@+id/subscribe_Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Picture"
+        android:layout_alignParentRight="true"
+        android:textColor="@drawable/button"
+        android:background="@drawable/custom_button"
+        android:layout_margin="5dp"
+        android:layout_above="@+id/list_devs"/>
+
+    <!-- Image view to show image after downloading -->
+    <ImageView android:id="@+id/my_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:layout_above="@+id/subscribe_Button"
+        android:layout_below="@+id/linearLayout"
+        android:maxHeight="800dp"
+        android:maxWidth="600dp"
+    />
+
+</RelativeLayout>
